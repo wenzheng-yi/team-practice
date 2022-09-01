@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="draw"></div>
+  </body>
+  <style>
+    #draw {
+        position:relative;
+        left: 40px;
+        top: 40px;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        /*
+          边框内的阴影可以使用radial-gradient来实现
+        */
+        /* background: radial-gradient(circle at center, transparent 70px, rgb(232, 247, 27)); */
+        /* box-shadow: 0 0 40px 6px rgb(240, 154, 42); */
+        /* 或者利用box-shadow可以编写多层shadow的特性来实现 */
+        box-shadow: 0 0 40px 6px rgb(240, 154, 42), inset 0 0 40px 0 rgb(232, 247, 27);
+    }
+    #draw::before,
+    #draw::after {
+      content: '';
+      position: absolute;
+      height: 160px;
+      left: 50%;
+      top: 50%;
+      width: 20px;
+      border-radius: 10px;
+      background: rgba(40, 185, 243,.5);
+    }
+    #draw::before {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    #draw::after {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  </style>
+</html>
