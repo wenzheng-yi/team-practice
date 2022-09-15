@@ -45,7 +45,7 @@ const ary = [
   ['d', 4],
 ]
 function createObj(data) {}
-console.log(createObj(ary))
+console.log(createObj(ary)) // {a:1, b:2, c:3, d:4}
 
 // 5.将数组中 数据值是字母 的数据序列号进行累加
 // 提示，需要用到正则验证，数组中第2、3、7项是字母，累加起来则是12

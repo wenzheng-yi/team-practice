@@ -55,7 +55,7 @@ function createObj(data) {
     return pre
   }, {})
 }
-console.log(createObj(ary))
+console.log(createObj(ary)) // {a:1, b:2, c:3, d:4}
 // 5.将数组中数据值是字母的序列号进行累加
 const isW = [0, '1', 'a', 'c', 2, '3', '5', 'd']
 function wIndSum(params) {
